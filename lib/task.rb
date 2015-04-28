@@ -1,4 +1,5 @@
 class Task
+  @@list = []
   define_method(:initialize) do |input_task|
     @input_task = input_task
   end
@@ -7,5 +8,8 @@ class Task
     @input_task
   end
 
-  
+  define_singleton_method(:all) do
+    @@list
+  end
+
 end
