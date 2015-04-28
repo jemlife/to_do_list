@@ -11,5 +11,12 @@ class Task
   define_singleton_method(:all) do
     @@list
   end
+  define_method(:store) do
+    @@list.push(self.task())
+  end
+  define_singleton_method(:clear) do
+    @@list = []
+  end
+
 
 end
