@@ -1,0 +1,14 @@
+<h1> Your Task List Today! </h1>
+<h1></h1>
+
+<h3> Here is your list</h3>
+
+<% @list.each do |item| %>
+ <ul> <%= item.task() %> </ul>
+<%end>
+
+<form action= "/tasks" method= "post">
+  <label for= "list"> Please enter a new Task here:</label>
+  <input id= "list" name= 'list' type= 'text'>
+  <button type= "submit"> Add Your Task NOW! </button>
+</form>
