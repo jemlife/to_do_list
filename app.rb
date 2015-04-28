@@ -4,7 +4,7 @@ also_reload('lib/**/*.rb')
 require('./lib/task')
 
 get('/') do
-  @list = Task.all
+  @list = Task.all()
   erb(:index)
 end
 

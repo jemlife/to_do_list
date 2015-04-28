@@ -22,7 +22,7 @@ describe(Task) do
     it('Stores task into list') do
     test_task = Task.new('be lovely')
     test_task.store()
-    expect(Task.all()).to(eq(['be lovely']))
+    expect(Task.all()).to(eq([test_task]))
     end
   end
 
@@ -30,7 +30,7 @@ describe(Task) do
     it('Stores task into list') do
       test_task = Task.new('give your mom a kiss')
       test_task.store()
-      expect(Task.all()).to(eq(['give your mom a kiss']))
+      expect(Task.all()).to(eq([test_task]))
     end
   end
 

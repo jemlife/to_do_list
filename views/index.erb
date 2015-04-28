@@ -3,12 +3,14 @@
 
 <h3> Here is your list</h3>
 
-<% @list.each do |item| %>
- <ul> <%= item.task() %> </ul>
-<%end>
+<ul>
+<% @list.each() do |item| %>
+ <li> <%= item.task() %> </li>
+<% end %>
+</ul>
 
 <form action= "/tasks" method= "post">
   <label for= "list"> Please enter a new Task here:</label>
   <input id= "list" name= 'list' type= 'text'>
-  <button type= "submit"> Add Your Task NOW! </button>
+  <button type="submit"> Add Your Task NOW! </button>
 </form>
